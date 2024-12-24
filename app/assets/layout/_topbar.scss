@@ -1,0 +1,134 @@
+@use "mixins";
+
+.layout-topbar {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  height: 4rem;
+  width: calc(100% - 18rem);
+  z-index: 997;
+  background-color: var(--surface-overlay);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .02), 0 0 2px rgba(0, 0, 0, .05), 0 1px 4px rgba(0, 0, 0, .08);
+  transition: width var(--element-transition-duration);
+
+  .layout-topbar-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: var(--text-color-secondary);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: background-color var(--element-transition-duration);
+
+    &:hover {
+      color: var(--text-color);
+      background-color: var(--surface-hover);
+    }
+
+    &:focus-visible {
+      @include mixins.focused();
+    }
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    span {
+      font-size: 1rem;
+      display: none;
+    }
+  }
+
+  .layout-menu-button {
+    margin-left: 2rem;
+  }
+
+  .layout-topbar-menu-button {
+    display: none;
+
+    i {
+      font-size: 1.25rem;
+    }
+  }
+
+  .layout-topbar-menu {
+    margin: 0 0 0 auto;
+    padding: 0 2rem 0 0;
+    list-style: none;
+    display: flex;
+
+    .layout-topbar-button {
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .layout-topbar {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+    left: 0;
+
+    .layout-topbar-logo {
+      width: auto;
+      order: 2;
+    }
+
+    .layout-menu-button {
+      margin-left: 0;
+      order: 1;
+    }
+
+    .layout-topbar-menu-button {
+      display: inline-flex;
+      margin-left: 0;
+      order: 3;
+    }
+
+    .layout-topbar-menu {
+      margin-left: 0;
+      position: absolute;
+      flex-direction: column;
+      background-color: var(--surface-overlay);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .02), 0 0 2px rgba(0, 0, 0, .05), 0 1px 4px rgba(0, 0, 0, .08);
+      border-radius: 12px;
+      padding: 1rem;
+      right: 2rem;
+      top: 5rem;
+      min-width: 15rem;
+      display: none;
+      -webkit-animation: scalein 0.15s linear;
+      animation: scalein 0.15s linear;
+
+      &.layout-topbar-menu-mobile-active {
+        display: block
+      }
+
+      .layout-topbar-button {
+        margin-left: 0;
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        border-radius: 12px;
+        padding: 1rem;
+
+        i {
+          font-size: 1rem;
+          margin-right: .5rem;
+        }
+
+        span {
+          font-weight: medium;
+          display: block;
+        }
+      }
+    }
+  }
+}
