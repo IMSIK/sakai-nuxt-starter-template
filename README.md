@@ -6,7 +6,7 @@ Welcome to the Sakai-Nuxt Starter template! This is a personal starter kit desig
 
 The Sakai-Nuxt Starter is a port of the [Sakai Vue](https://github.com/primefaces/sakai-vue) template, tailored for Nuxt.js applications. It features a customized sidebar that replaces the default one, aiming to provide a more intuitive navigation experience.
 
-**Note:** As this is a starter kit, it does not include certain configurations, such as the ability to change the color palette like the original Sakai Vue template. These features are planned for the official **Sakai Plus** template, which is currently under development.
+**Note:** As this is a starter kit, it does not include certain configurations, such as the ability to change the color palette like the original Sakai Vue template. These features are planned for the official **Sora 空** template, which is currently under development.
 
 ## Features
 
