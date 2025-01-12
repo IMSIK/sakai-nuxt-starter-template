@@ -32,16 +32,6 @@ export default defineNuxtConfig({
     typedPages: true,
   },
 
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler',
-        },
-      },
-    },
-  },
-
   eslint: {
     config: {
       stylistic: {
@@ -67,5 +57,5 @@ export default defineNuxtConfig({
     cssPath: ['~/assets/tailwind.css', { injectPosition: 'first' }],
   },
 
-  compatibilityDate: '2024-12-23',
+  compatibilityDate: '2025-01-12',
 })
