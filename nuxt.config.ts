@@ -1,8 +1,9 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@primevue/nuxt-module',
-    '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
     '@vueuse/nuxt',
   ],
@@ -20,6 +21,7 @@ export default defineNuxtConfig({
 
   css: [
     '@/assets/styles.scss',
+    '@/assets/tailwind.css',
   ],
 
   future: {
@@ -30,6 +32,14 @@ export default defineNuxtConfig({
   experimental: {
     // https://nuxt.com/blog/v3-5#fully-typed-pages
     typedPages: true,
+  },
+
+  compatibilityDate: '2025-02-20',
+
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
   },
 
   eslint: {
@@ -44,7 +54,6 @@ export default defineNuxtConfig({
     autoImport: true,
     importTheme: { from: '@/theme/app-theme.js' },
     options: {
-      ripple: true,
       // Choose your language here: https://github.com/primefaces/primelocale
       locale: {
         // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -52,10 +61,4 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  tailwindcss: {
-    cssPath: ['~/assets/tailwind.css', { injectPosition: 'first' }],
-  },
-
-  compatibilityDate: '2025-01-12',
 })
