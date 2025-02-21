@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import esLocale from './app/theme/locale/es.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -51,14 +52,18 @@ export default defineNuxtConfig({
   },
 
   primevue: {
-    autoImport: true,
+    autoImport: false,
+    components: {
+      include: '*',
+      exclude: ['Form', 'FormField'],
+    },
+    directives: {
+      include: '*',
+    },
     importTheme: { from: '@/theme/app-theme.js' },
     options: {
       // Choose your language here: https://github.com/primefaces/primelocale
-      locale: {
-        // eslint-disable-next-line @typescript-eslint/no-require-imports
-        ...require('./app/theme/locale/es.json'),
-      },
+      locale: { ...esLocale },
     },
   },
 })
