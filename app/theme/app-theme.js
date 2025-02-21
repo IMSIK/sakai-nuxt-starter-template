@@ -56,5 +56,9 @@ export default {
   options: {
     darkModeSelector: '.p-dark',
     ripple: true,
+    cssLayer: {
+      name: 'primevue',
+      order: 'base, primevue',
+    },
   },
 }
