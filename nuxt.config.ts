@@ -60,8 +60,9 @@ export default defineNuxtConfig({
     directives: {
       include: '*',
     },
-    importTheme: { from: '@/theme/app-theme.js' },
+    importTheme: { from: '@/theme/app-theme.ts' },
     options: {
+      ripple: true,
       // Choose your language here: https://github.com/primefaces/primelocale
       locale: { ...esLocale },
     },

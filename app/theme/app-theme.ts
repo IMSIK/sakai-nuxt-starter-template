@@ -1,5 +1,6 @@
-import { definePreset } from '@primevue/themes'
-import Aura from '@primevue/themes/aura'
+import Aura from '@primeuix/themes/aura'
+import { definePreset } from '@primeuix/themes'
+import type { Theme } from '@primeuix/themes/types'
 
 const AuraCustomPreset = definePreset(Aura, {
   semantic: {
@@ -51,14 +52,15 @@ const AuraCustomPreset = definePreset(Aura, {
   },
 })
 
-export default {
+const config: Theme = {
   preset: AuraCustomPreset,
   options: {
     darkModeSelector: '.p-dark',
-    ripple: true,
     cssLayer: {
       name: 'primevue',
       order: 'base, primevue',
     },
   },
 }
+
+export default config
