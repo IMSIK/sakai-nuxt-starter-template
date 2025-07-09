@@ -9,8 +9,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
   ],
 
-  devtools: { enabled: true },
-
+  devtools: { enabled: false },
   app: {
     head: {
       charset: 'utf-8',
@@ -19,30 +18,24 @@ export default defineNuxtConfig({
       script: [{ src: 'https://kit.fontawesome.com/46ad5ba21c.js', crossorigin: 'anonymous' }],
     },
   },
-
   css: [
     '@/assets/styles.scss',
     '@/assets/tailwind.css',
   ],
-
   future: {
     // https://nuxt.com/docs/getting-started/upgrade#testing-nuxt-4
     compatibilityVersion: 4,
   },
-
   experimental: {
     // https://nuxt.com/blog/v3-5#fully-typed-pages
     typedPages: true,
   },
-
   compatibilityDate: '2025-02-20',
-
   vite: {
     plugins: [
       tailwindcss(),
     ],
   },
-
   eslint: {
     config: {
       stylistic: {
@@ -50,7 +43,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
   primevue: {
     autoImport: false,
     components: {
