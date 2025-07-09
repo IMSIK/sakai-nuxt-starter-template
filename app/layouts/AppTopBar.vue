@@ -14,7 +14,7 @@ onBeforeUnmount(() => {
 
 const onTopBarMenuButton = () => topbarMenuActive.value = !topbarMenuActive.value
 
-const onProfileClick = () => topbarMenuActive.value = false
+// const onProfileClick = () => topbarMenuActive.value = false
 
 const topbarMenuClasses = computed(() => {
   return {
@@ -77,22 +77,6 @@ const isOutsideClicked = (event) => {
       >
         <i :class="['pi', { 'pi-moon': isDarkTheme, 'pi-sun': !isDarkTheme }]" />
         <span>Dark Mode</span>
-      </button>
-      <button
-        as="router-link"
-        class="layout-topbar-button"
-        @click="onTopBarMenuButton()"
-      >
-        <i class="pi pi-calendar" />
-        <span>Calendar</span>
-      </button>
-      <button
-        as="router-link"
-        class="layout-topbar-button"
-        @click="onProfileClick"
-      >
-        <i class="pi pi-user" />
-        <span>Profile</span>
       </button>
       <button
         as="router-link"

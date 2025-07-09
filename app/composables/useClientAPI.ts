@@ -3,7 +3,6 @@ import { createFetch } from '@vueuse/core'
 
 let customFetch: ReturnType<typeof createFetch> | null = null
 
-// Function used for client requests, it's practically the $fetch replacement for nuxt
 export function useClientAPI() {
   const toast = useToast()
 
@@ -11,9 +10,6 @@ export function useClientAPI() {
     customFetch = createFetch({
       options: {
         async onFetchError(ctx) {
-          if (ctx.response?.status === 401 || ctx.response?.status === 403) {
-            await navigateTo('/auth/Login')
-          }
           if (ctx.response?.status === 404) {
             toast.add({
               severity: 'warn',

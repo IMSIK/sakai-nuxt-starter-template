@@ -26,19 +26,7 @@ const onThrow = () => {
         Auth Pages
       </h4>
 
-      <div class="flex flex-wrap gap-6 w-1/6">
-        <Button
-          severity="warn"
-          as="router-link"
-          to="/auth/access"
-          label="Unauthorized Page"
-        />
-        <Button
-          as="router-link"
-          to="/auth/login"
-          label="Login Page"
-        />
-      </div>
+      <div class="flex flex-wrap gap-6 w-1/6" />
     </div>
   </div>
 </template>

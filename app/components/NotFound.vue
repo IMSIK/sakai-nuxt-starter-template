@@ -42,9 +42,11 @@ definePageMeta({
           />
         </g>
       </svg>
-      <div style="border-radius: 56px; 
-                  padding: 0.3rem; 
-                  background: linear-gradient(180deg, color-mix(in srgb, var(--primary-color), transparent 60%) 10%, var(--surface-ground) 30%)">
+      <div
+        style="border-radius: 56px;
+                  padding: 0.3rem;
+                  background: linear-gradient(180deg, color-mix(in srgb, var(--primary-color), transparent 60%) 10%, var(--surface-ground) 30%)"
+      >
         <div
           class="w-full bg-surface-0 dark:bg-surface-900 py-20 px-8 sm:px-20 flex flex-col items-center"
           style="border-radius: 53px"
@@ -57,7 +59,7 @@ definePageMeta({
             as="router-link"
             label="Go to Dashboard"
             to="/"
-          ></Button>
+          />
         </div>
       </div>
     </div>
