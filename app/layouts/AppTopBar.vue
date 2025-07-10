@@ -86,9 +86,7 @@ const isOutsideClicked = (event) => {
         <span>Settings</span>
       </button> -->
       <buttons-language-button />
-      <button @click="locale = 'zh_tw'">
-        切換中文
-      </button>
+      <button @click="locale = 'zh_tw'" />
     </div>
   </div>
 </template>

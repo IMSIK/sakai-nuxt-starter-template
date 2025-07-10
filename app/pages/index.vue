@@ -21,12 +21,16 @@ const onThrow = () => {
           severity="danger"
           @click="onThrow"
         />
+        <SelectButton
+          class="selectbtn"
+          :options="['not pass', '9 years', '10 years']"
+        />
       </div>
       <h4 class="mt-10">
         Auth Pages
         <p>{{ $t('option_priority_from_lower_to_higher') }}</p>
       </h4>
-
+      <p>{{ $t('all') }}</p>
       <div class="flex flex-wrap gap-6 w-1/6" />
     </div>
   </div>

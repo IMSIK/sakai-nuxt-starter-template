@@ -1,3 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @use '../assets/layout/layout.scss';
 @use 'primeicons/primeicons.css';
+
+:root {
+  /* Override PrimeVue surface color */
+//   --p-surface-100: #b9b4b4; /* ← 新的值，例如一个浅灰色 */
+}
+
+// :root, body {
+//   transition: background-color 0.3s ease, color 0.3s ease;
+// }

@@ -4,7 +4,11 @@ import AppMenuItem from './AppMenuItem.vue'
 const modules = ref([
   {
     label: 'Home',
-    items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }],
+    items: [
+      { label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' },
+      { label: 'Evaluator', icon: 'pi pi-fw pi-calculator', to: '/evaluator' },
+      // { label: 'Evaluator2', icon: 'pi pi-fw pi-home', to: '/evaluator2' },
+    ],
   },
 ])
 </script>

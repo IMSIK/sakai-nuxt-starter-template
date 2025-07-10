@@ -35,6 +35,9 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+    server: {
+      allowedHosts: ['892d587750dc.ngrok-free.app'],
+    },
   },
   eslint: {
     config: {
