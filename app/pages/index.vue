@@ -24,6 +24,7 @@ const onThrow = () => {
       </div>
       <h4 class="mt-10">
         Auth Pages
+        <p>{{ $t('option_priority_from_lower_to_higher') }}</p>
       </h4>
 
       <div class="flex flex-wrap gap-6 w-1/6" />

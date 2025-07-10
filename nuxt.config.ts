@@ -1,5 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
-import esLocale from './app/theme/locale/es.json'
+// import esLocale from './app/theme/locale/es.json'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -56,7 +56,7 @@ export default defineNuxtConfig({
     options: {
       ripple: true,
       // Choose your language here: https://github.com/primefaces/primelocale
-      locale: { ...esLocale },
+      // locale: { ...esLocale },
     },
   },
 })

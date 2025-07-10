@@ -78,12 +78,16 @@ const isOutsideClicked = (event) => {
         <i :class="['pi', { 'pi-moon': isDarkTheme, 'pi-sun': !isDarkTheme }]" />
         <span>Dark Mode</span>
       </button>
-      <button
+      <!-- <button
         as="router-link"
         class="layout-topbar-button"
       >
         <i class="pi pi-cog" />
         <span>Settings</span>
+      </button> -->
+      <buttons-language-button />
+      <button @click="locale = 'zh_tw'">
+        切換中文
       </button>
     </div>
   </div>

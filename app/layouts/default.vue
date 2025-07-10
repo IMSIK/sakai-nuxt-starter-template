@@ -1,6 +1,6 @@
 <script setup>
 import AppTopBar from './AppTopBar.vue'
-import AppFooter from './AppFooter.vue'
+// import AppFooter from './AppFooter.vue'
 import AppSidebar from './AppSidebar.vue'
 import { useLayout } from './composables/layout'
 

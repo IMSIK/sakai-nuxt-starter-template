@@ -11,21 +11,24 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "gen-i18n": "node ./scripts/translation/generate_translation_file.mjs ./scripts/translation/lobby/"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.6.2",
     "@primeuix/themes": "^1.0.0",
     "@tailwindcss/vite": "^4.0.9",
     "file-saver": "^2.0.5",
+    "fs": "^0.0.1-security",
     "nuxt": "^3.15.4",
     "primeicons": "^7.0.0",
     "primevue": "^4.3.1",
     "tailwindcss": "^4.0.9",
     "tailwindcss-primeui": "^0.3.4",
     "vue": "^3.5.13",
+    "vue-i18n": "^11.1.9",
     "vue-router": "^4.5.0",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@nuxt/eslint-config": "^0.6.2",
